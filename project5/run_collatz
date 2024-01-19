@@ -1,0 +1,8 @@
+#!/bin/tcsh -f
+#
+# You may copy this file for other functions
+#
+cat collatz.s collatz_driver.s collatz_data02.s > collatz_prog.s
+spim -file collatz_prog.s
+rm collatz_prog.s
+# "tail -n+2" strips the first line of spim's output, which is irrelevant
